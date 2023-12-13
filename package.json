@@ -23,6 +23,7 @@
   },
   "homepage": "https://github.com/SmValeriya/start-gulp-template#readme",
   "devDependencies": {
+    "browser-sync": "^2.29.3",
     "del": "^7.1.0",
     "gulp": "^4.0.2",
     "gulp-plumber": "^1.2.1",
