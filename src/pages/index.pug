@@ -1,0 +1,19 @@
+extends common/layout.pug
+
+block variables
+  -var page = 'index'
+
+block content
+  main.main
+    h2 Title
+    include includes/index/banner.pug
+    hr
+    p paragraph
+    ul.items
+      each val in team
+        li= val
+      h1.navbar__title This is my nav
+      ul
+        each val in ["Home", "Blog", "About"]
+          li.navbar__button
+            a(href="#")= val

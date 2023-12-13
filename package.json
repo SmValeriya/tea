@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "Start boilerplate for static markup",
   "main": "index.js",
+  "type": "module",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -22,6 +23,8 @@
   },
   "homepage": "https://github.com/SmValeriya/start-gulp-template#readme",
   "devDependencies": {
-    "gulp": "^4.0.2"
+    "gulp": "^4.0.2",
+    "gulp-plumber": "^1.2.1",
+    "gulp-pug": "^5.0.0"
   }
 }
