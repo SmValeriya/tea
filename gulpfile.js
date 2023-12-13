@@ -15,3 +15,8 @@ export default series(
   parallel(views),
   serve
 );
+
+export const build = series(
+  clean,
+  parallel(views)
+)

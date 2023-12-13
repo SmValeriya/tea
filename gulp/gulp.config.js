@@ -1,5 +1,6 @@
 export const srcDir = 'src';
 export const buildDir = 'build';
+export const isProd = process.argv.includes('--production');
 
 export const browserSyncOptions = {
   server: {
