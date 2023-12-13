@@ -1,0 +1,10 @@
+footer {
+  &:hover {
+    border: 1px solid red;
+  }
+
+  @include tablets {
+    width: 480px;
+    height: 560px;
+  }
+}

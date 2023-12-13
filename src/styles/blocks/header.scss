@@ -1,0 +1,9 @@
+header {
+  width: 220px;
+  display: flex;
+  background-color: yellow;
+
+  @include tablets {
+    width: 500px;
+  }
+}

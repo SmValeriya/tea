@@ -16,4 +16,4 @@ node_modules/
 *.cfg
 
 # Папка с собранными файлами проекта
-# build/
+build/

@@ -16,5 +16,10 @@ export const paths = {
     src: `./${srcDir}/pages/*.pug`,
     dist: buildDir,
     watch: `./${srcDir}/pages/**/*.pug`
-  }
+  },
+  styles: {
+    src: `./${srcDir}/styles/*.scss`,
+    dist: `./${buildDir}/styles/`,
+    watch: `./${srcDir}/styles/**/*.scss`
+  },
 };
