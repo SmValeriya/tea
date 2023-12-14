@@ -12,9 +12,10 @@ import rename from "gulp-rename";
 import { paths, isProd } from "../gulp.config.js";
 
 const sass = gulpSass(dartSass);
+const { src, dest } = gulp;
 
 export const styles = () => {
-  return gulp.src(paths.styles.src)
+  return src(paths.styles.src)
     .pipe(gulpIf(!isProd, sourcemaps.init()))
     .pipe(plumber())
     .pipe(sassGlob())
@@ -31,5 +32,5 @@ export const styles = () => {
     }))
     .pipe(plumber.stop())
     .pipe(gulpIf(!isProd, sourcemaps.write()))
-    .pipe(gulp.dest(paths.styles.dist))
+    .pipe(dest(paths.styles.dist))
 }

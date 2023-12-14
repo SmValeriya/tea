@@ -4,13 +4,15 @@ import plumber from "gulp-plumber";
 import { paths, isProd } from "../gulp.config.js";
 import { data } from "../../content.js";
 
+const { src, dest } = gulp;
+
 export const views = () => {
-  return gulp.src(paths.views.src)
+  return src(paths.views.src)
     .pipe(plumber())
     .pipe(pug({
       data: data,
       pretty: !isProd
     }))
     .pipe(plumber.stop())
-    .pipe(gulp.dest(paths.views.dist))
+    .pipe(dest(paths.views.dist))
 }
