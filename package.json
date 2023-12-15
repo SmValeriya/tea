@@ -5,12 +5,14 @@
   "main": "index.js",
   "type": "module",
   "scripts": {
-    "gulp": "gulp",
+    "dev": "gulp",
     "build": "gulp build --production",
     "pugLint": "glob-exec \"./src/pages/**/*.pug\" -- \"pug-lint {{files.join(' ')}}\"",
     "styleLint": "stylelint \"./src/styles/**/*.scss\"",
     "styleLintFix": "stylelint \"./src/styles/**/*.scss\" --fix",
-    "test": "npm run pugLint && npm run styleLint",
+    "esLint": "eslint \"./src/scripts/**/*.js\"",
+    "esLintFix": "eslint \"./src/scripts/**/*.js\" --fix",
+    "test": "npm run pugLint && npm run styleLint && npm run esLint",
     "prepare": "husky install"
   },
   "repository": {
@@ -31,6 +33,7 @@
   "devDependencies": {
     "browser-sync": "^2.29.3",
     "del": "^7.1.0",
+    "eslint": "^8.55.0",
     "glob-exec": "^0.1.1",
     "gulp": "^4.0.2",
     "gulp-autoprefixer": "^9.0.0",

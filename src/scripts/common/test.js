@@ -1,8 +1,8 @@
 export function test() {
-  console.log('hello from test!!!');
+  console.log("hello from test!!!");
   const promise2 = new Promise(function (resolve) {
     setTimeout(function () {
-      resolve('test settimeout');
+      resolve("test settimeout");
     }, 500);
   });
   promise2.then(function (value) {
@@ -18,5 +18,5 @@ function fooka() {
   console.log(baz);
 }
 
-const baz = '123';
+const baz = "123";
 fooka();
