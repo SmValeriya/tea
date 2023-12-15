@@ -22,4 +22,9 @@ export const paths = {
     dist: `./${buildDir}/styles/`,
     watch: `./${srcDir}/styles/**/*.scss`
   },
+  scripts: {
+    src: `./${srcDir}/scripts/*.js`,
+    dist: `./${buildDir}/scripts/`,
+    watch: `./${srcDir}/scripts/**/*.js`
+  },
 };
