@@ -9,7 +9,8 @@ import autoPrefixer from "gulp-autoprefixer";
 import groupmedia from "gulp-group-css-media-queries";
 import cleanCss from "gulp-clean-css";
 import rename from "gulp-rename";
-import { paths, isProd } from "../gulp.config.js";
+import rev from "gulp-rev";
+import { paths, isProd, revManifest } from "../gulp.config.js";
 
 const sass = gulpSass(dartSass);
 const { src, dest } = gulp;
@@ -30,7 +31,10 @@ export const styles = () => {
       suffix: ".min",
       extname: ".css"
     }))
+    .pipe(gulpIf(isProd, rev()))
     .pipe(plumber.stop())
     .pipe(gulpIf(!isProd, sourcemaps.write()))
     .pipe(dest(paths.styles.dist))
+    .pipe(gulpIf(isProd, rev.manifest(revManifest.path, revManifest.options)))
+    .pipe(gulpIf(isProd, dest(revManifest.options.base)));
 }

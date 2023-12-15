@@ -14,5 +14,5 @@ export const views = () => {
       pretty: !isProd
     }))
     .pipe(plumber.stop())
-    .pipe(dest(paths.views.dist))
+    .pipe(dest(paths.views.dist));
 }

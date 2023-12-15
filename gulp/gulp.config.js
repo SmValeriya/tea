@@ -11,6 +11,14 @@ export const browserSyncOptions = {
   cors: true
 };
 
+export const revManifest = {
+  path: `${buildDir}/rev-manifest.json`,
+  options: {
+    base: `./${buildDir}`,
+    merge: true
+  }
+};
+
 export const paths = {
   views: {
     src: `./${srcDir}/pages/*.pug`,
