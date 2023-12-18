@@ -1,7 +1,8 @@
 import gulp from "gulp";
 import pug from "gulp-pug";
 import plumber from "gulp-plumber";
-import { paths, isProd } from "../gulp.config.js";
+import { paths } from "../config/paths.js";
+import { isProd } from "../gulp.config.js";
 import { data } from "../../content.js";
 
 const { src, dest } = gulp;

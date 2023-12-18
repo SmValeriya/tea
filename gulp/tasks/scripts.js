@@ -5,7 +5,9 @@ import plumber from "gulp-plumber";
 import gulpIf from "gulp-if";
 import rev from "gulp-rev";
 import webpackConfig from "../../webpack.config.js";
-import { paths, isProd, revManifest } from "../gulp.config.js";
+import { paths } from "../config/paths.js";
+import { isProd } from "../gulp.config.js";
+import { revManifest } from "../config/revManifest.js";
 
 const { src, dest } = gulp;
 
@@ -18,4 +20,4 @@ export const scripts = () => {
     .pipe(dest(paths.scripts.dist))
     .pipe(gulpIf(isProd, rev.manifest(revManifest.path, revManifest.options)))
     .pipe(gulpIf(isProd, dest(revManifest.options.base)));
-};
+}

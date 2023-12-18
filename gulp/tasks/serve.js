@@ -1,6 +1,8 @@
 import gulp from "gulp";
-import { paths, browserSyncOptions } from "../gulp.config.js";
 import browserSync from "browser-sync";
+import { paths } from "../config/paths.js";
+import { browserSyncOptions } from "../config/browserSync.js";
+
 const { series, watch } = gulp;
 const bs = browserSync.create();
 

@@ -10,7 +10,9 @@ import groupmedia from "gulp-group-css-media-queries";
 import cleanCss from "gulp-clean-css";
 import rename from "gulp-rename";
 import rev from "gulp-rev";
-import { paths, isProd, revManifest } from "../gulp.config.js";
+import { paths } from "../config/paths.js";
+import { isProd } from "../gulp.config.js";
+import { revManifest } from "../config/revManifest.js";
 
 const sass = gulpSass(dartSass);
 const { src, dest } = gulp;
