@@ -5,6 +5,9 @@ import { styles } from "./gulp/tasks/styles.js";
 import { scripts } from "./gulp/tasks/scripts.js";
 import { fonts } from "./gulp/tasks/fonts.js";
 import { fontStyle } from "./gulp/tasks/fontStyleFile.js";
+import { images } from "./gulp/tasks/images.js";
+import { svg } from "./gulp/tasks/svg.js";
+import { sprite } from "./gulp/tasks/sprite.js";
 import { serve } from "./gulp/tasks/serve.js";
 import { reWriteDependencyNames } from './gulp/tasks/revrewrite.js';
 
@@ -17,6 +20,9 @@ export {
   scripts,
   fonts,
   fontStyle,
+  sprite,
+  images,
+  svg,
   reWriteDependencyNames
 };
 
@@ -24,7 +30,7 @@ export default series(
   clean,
   fonts,
   fontStyle,
-  parallel(views, styles, scripts),
+  parallel(views, styles, scripts, sprite, images, svg),
   serve
 );
 
@@ -32,6 +38,6 @@ export const build = series(
   clean,
   fonts,
   fontStyle,
-  parallel(views, styles, scripts),
+  parallel(views, styles, scripts, sprite, images, svg),
   reWriteDependencyNames
 )
