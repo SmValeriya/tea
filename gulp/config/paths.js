@@ -39,9 +39,5 @@ export const paths = {
   sprite: {
     src: `./${srcDir}/images/icons/*.svg`,
     dist: `./${buildDir}/images/`,
-  },
-  favicon: {
-    src: `./${srcDir}/images/favicon/*.{jpg,jpeg,png,gif}`,
-    dist: `./${buildDir}/images/favicon/`,
   }
 };
