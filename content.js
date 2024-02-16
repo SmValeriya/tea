@@ -1,16 +1,29 @@
 export const data = {
-  "team": [
-    [
-      "дэниэл редклифф", "Шеф-повар"
-    ],
-    [
-      "ричард джеймс", "Оператор"
-    ],
-    [
-      "Джейк Финн", "Менеджер"
-    ],
-    [
-      "Николай Иванов", "Шоколатье"
-    ]
+  "products": [
+    {
+      link: '#',
+      title: 'Black',
+      imgPath: ''
+    },
+    {
+      link: '#',
+      title: 'Green',
+      imgPath: ''
+    },
+    {
+      link: '#',
+      title: 'White',
+      imgPath: ''
+    },
+    {
+      link: '#',
+      title: 'Oolong',
+      imgPath: ''
+    },
+    {
+      link: '#',
+      title: 'Pu-erh',
+      imgPath: ''
+    }
   ]
 }

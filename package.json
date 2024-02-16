@@ -1,8 +1,8 @@
 {
-  "name": "start-gulp-template",
+  "name": "tea",
   "version": "1.0.0",
-  "description": "Start boilerplate for static markup",
-  "main": "index.js",
+  "description": "Tea markup",
+  "main": "main.js",
   "type": "module",
   "scripts": {
     "dev": "gulp",
@@ -27,9 +27,9 @@
   "author": "Smirnova",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/SmValeriya/start-gulp-template/issues"
+    "url": "https://github.com/SmValeriya/tea/issues"
   },
-  "homepage": "https://github.com/SmValeriya/start-gulp-template#readme",
+  "homepage": "https://github.com/SmValeriya/tea#readme",
   "devDependencies": {
     "browser-sync": "^2.29.3",
     "del": "^7.1.0",
