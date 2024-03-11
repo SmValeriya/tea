@@ -1,0 +1,6 @@
+mixin payments(classList)
+  ul.payments(class=classList)
+    each payment in payments
+      li.payment__item
+        a.payment__link(href=payment.link)
+          img(src=payment.imagePath alt=payment.title)

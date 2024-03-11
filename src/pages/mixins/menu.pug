@@ -1,0 +1,5 @@
+mixin menu(classList)
+  ul.menu(class=classList)
+    each product in products
+      li.menu__item
+        a.menu__link(href=product.link)= product.title

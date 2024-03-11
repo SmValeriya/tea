@@ -1,0 +1,64 @@
+.mailing {
+  padding: 100px 0;
+  background-color: #f7f2ea;
+  background-image: url('../images/mailing-bg.png');
+  background-position: bottom right;
+  background-repeat: no-repeat;
+
+  @include laptop {
+    padding: 60px 0;
+  }
+
+  @include phones {
+    padding: 50px 0;
+  }
+}
+
+.mailing__title {
+  margin-bottom: 50px;
+
+  @include laptop {
+    text-align: center;
+  }
+}
+
+.mailing__content {
+  --horizontal-gap: 40px;
+
+  display: flex;
+  gap: 60px var(--horizontal-gap);
+
+  @include laptop {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  @include phones {
+    gap: 30px 0;
+  }
+}
+
+.mailing__description {
+  width: calc((100% - var(--horizontal-gap)) / 2);
+  line-height: 1.5;
+
+  @include laptop {
+    width: 100%;
+    text-align: center;
+  }
+
+  @include phones {
+    font-size: 13px;
+  }
+}
+
+.mailing__form {
+  width: calc((100% - var(--horizontal-gap)) / 2);
+  display: flex;
+  flex-wrap: wrap;
+
+  @include laptop {
+    width: 100%;
+    max-width: 580px;
+  }
+}

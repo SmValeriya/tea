@@ -1,2 +1,40 @@
-footer
-  p Footer
+include ../mixins/menu.pug
+include ../mixins/company.pug
+include ../mixins/logo.pug
+include ../mixins/socials.pug
+include ../mixins/payments.pug
+
+footer.footer
+  div.container.footer__container
+    div.footer__top
+      .footer__col
+        h3.footer__heading Products
+        +menu('footer__menu footer__info-text')
+      .footer__col
+        h3.footer__heading Company
+        +company('footer__company footer__info-text', false)
+      .footer__col.footer__col--without-heading
+        blockquote.footer__quote
+          p.footer__quote-text “Tea is a journey. It can take you to new places and open your mind to new experiences. Let every sip transport you to a world of wonder and possibility”
+        cite.footer__quote-author Dragomir Teodorescu,
+          span.footer__quote-author-occupation Tealuxe owner
+      .footer__col
+        h3.footer__heading Stay In Touch
+        .footer__contacts
+          p.footer__contacts-text Please feel free to contact us via the email of phone. We would be happy to hear from you!
+          +logo('footer__logo')
+          .footer__contacts-info
+            a.footer__contacts-mail(href="mailto:info@tealuxe.com")
+              svg.footer__contacts-mail-icon
+                title Mail icon
+                use(href="./images/sprite.svg#mail")
+              | info@tealuxe.com
+            a.footer__contacts-phone(href="tel:+370680123456")
+              svg.footer__contacts-phone-icon
+                title Phone icon
+                use(href="./images/sprite.svg#phone")
+              | +370 680 123456
+          +socials('footer__socials')
+    div.footer__bottom
+      p.footer__copy © Tealuxe, 2023
+      +payments('footer__payments')

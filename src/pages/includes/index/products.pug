@@ -1,0 +1,9 @@
+section.products
+  div.container.products__container
+    h2.products__title.title Explore our Collections
+    ul.products__list
+      each product in products
+        li.products__item
+          a.products__link(href="#")
+            img.products__item-img(src=product.imgPath alt=product.title)
+            p.products__item-title= product.title

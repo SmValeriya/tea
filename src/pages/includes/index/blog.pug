@@ -1,0 +1,15 @@
+section.blog
+  div.container.blog__container
+    h2.title.blog__title Our Tea Blog
+    ul.blog__list
+      each blog in blogs
+        li.blog__item
+          img.blog__item-img(src=blog.imagePath alt="")
+          .blog__item-content
+            h3.blog__item-title= blog.title
+            a.blog__item-author(href="#") by #{blog.author}
+            a.blog__item-link(href="#") Read
+              svg.blog__item-link-img
+                title Arrow
+                use(href="./images/sprite.svg#arrow")
+    a.blog__link(href="#") View all

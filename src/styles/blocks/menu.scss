@@ -1,0 +1,11 @@
+.menu {
+  display: flex;
+}
+
+.menu__item:hover {
+  transition: all 0.3s ease;
+
+  &:hover {
+    color: #754E29;
+  }
+}

@@ -3,6 +3,7 @@ import svgo from "gulp-svgo";
 import svgSprite from "gulp-svg-sprite";
 import plumber from "gulp-plumber";
 import { paths } from "../config/paths.js";
+import { isProd } from "../gulp.config.js"
 import { svgoPluginsSprite } from "../config/svgConfig.js";
 
 const { src, dest } = gulp;
@@ -13,12 +14,10 @@ export const sprite = () => {
     .pipe(svgo(svgoPluginsSprite))
     .pipe(svgSprite({
       mode: {
-        stack: {
-          sprite: '../sprite.svg'
-        },
         symbol: {
-          example: true,
-        },
+          sprite: '../sprite.svg',
+          example: !isProd,
+        }
       }
     }))
     .pipe(plumber.stop())

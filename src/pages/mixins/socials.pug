@@ -1,0 +1,8 @@
+mixin socials(classList)
+  ul.socials(class=classList)
+    each social in socials
+      li.socials__item
+        a.socials__link(href=social.link)
+          svg.socials__img
+            title= social.title
+            use(href=`./images/sprite.svg#${social.imageName}`)

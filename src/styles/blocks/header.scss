@@ -1,9 +1,44 @@
-header {
-  width: 220px;
-  display: flex;
-  background-color: yellow;
+.header {
+  padding: 30px 0;
 
-  @include tablets {
-    width: 500px;
+  @include phones {
+    padding: 10px 0;
   }
+}
+
+.header__container {
+  display: grid;
+  align-items: center;
+  grid-template-columns: 1fr max-content 1fr;
+  min-height: 140px;
+
+  @include laptop {
+    min-height: auto;
+  }
+}
+
+.header__user-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 0 20px;
+}
+
+.header__logo {
+  height: 105px;
+  align-self: flex-start;
+
+  @include laptop {
+    align-self: center;
+  }
+
+  @include phones {
+    height: 55px;
+  }
+}
+
+.header__menu {
+  align-items: center;
+  gap: 0 65px;
+  font-size: 18px;
+  font-weight: 400;
 }

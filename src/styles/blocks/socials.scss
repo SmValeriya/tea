@@ -1,0 +1,16 @@
+.socials {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+
+.socials__img {
+  max-width: 24px;
+  height: 28px;
+  fill: #151618;
+  transition: all 0.3s ease;
+
+  &:hover {
+    fill: #754E29;
+  }
+}

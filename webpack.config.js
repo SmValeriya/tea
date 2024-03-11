@@ -3,7 +3,7 @@ import { isProd } from "./gulp/gulp.config.js";
 
 export default {
   entry: {
-    index: "./src/scripts/main.js"
+    main: "./src/scripts/main.js"
   },
 
   output: {

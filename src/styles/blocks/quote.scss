@@ -1,0 +1,25 @@
+.quote__text {
+  text-align: center;
+  font-family: Cormorant, serif;
+  font-size: 40px;
+  font-style: italic;
+  line-height: 1.2;
+  max-width: 704px;
+  margin: 0 auto;
+  padding: 150px 0;
+
+  @include laptop {
+    max-width: 744px;
+    padding: 120px 0;
+  }
+
+  @include tablets {
+    max-width: 640px;
+  }
+
+  @include phones {
+    font-size: 16px;
+    max-width: 376px;
+    padding: 60px 0;
+  }
+}

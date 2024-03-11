@@ -1,0 +1,155 @@
+.blog {
+  padding: 150px 0;
+
+  @include laptop {
+    padding: 120px 0;
+  }
+
+  @include phones {
+    padding: 60px 0;
+  }
+
+  @include min-phones {
+    padding: 50px 0;
+  }
+}
+
+.blog__container {
+  display: flex;
+  flex-direction: column;
+}
+
+.blog__title {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.blog__list {
+  --horizontal-gap: 58px;
+  --cols: 2;
+
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px var(--horizontal-gap);
+  margin-bottom: 60px;
+
+  @include laptop {
+    --horizontal-gap: 20px;
+
+    gap: 67px var(--horizontal-gap);
+  }
+
+  @include tablets {
+    gap: 30px 20px;
+  }
+
+  @include min-phones {
+    justify-content: center;
+  }
+}
+
+.blog__item {
+  max-width: 542px;
+  width: calc((100% - var(--horizontal-gap) * (var(--cols) - 1)) / (var(--cols)));
+  display: flex;
+  gap: 0 20px;
+
+  @include tablets {
+    width: 100%;
+  }
+
+  @include min-phones {
+    display: block;
+    max-width: 270px;
+  }
+
+  &:nth-child(even) {
+    @include tablets {
+      margin-left: 12%;
+    }
+
+    @include phones {
+      margin-left: 0;
+    }
+
+    @include min-phones {
+      display: none;
+    }
+  }
+}
+
+.blog__item-img {
+  max-width: 270px;
+  width: 51%;
+  object-fit: cover;
+
+  @include min-phones {
+    width: 100%;
+  }
+}
+
+.blog__item-content {
+  width: calc(100% - 20px - 51%);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+
+  @include min-phones {
+    width: 100%;
+  }
+}
+
+.blog__item-title {
+  font-size: 24px;
+  font-family: Cormorant, serif;
+  line-height: 1.2;
+  font-weight: 400;
+  margin-bottom: 10px;
+  min-height: 86px;
+
+  @include min-phones {
+    min-height: auto;
+  }
+}
+
+.blog__item-author {
+  font-size: 13px;
+  margin-bottom: auto;
+
+  @include phones {
+    margin-bottom: 20px;
+  }
+
+  @include min-phones {
+    margin-bottom: 10px;
+  }
+}
+
+.blog__item-link-img {
+  display: inline-block;
+  width: 5px;
+  height: 10px;
+  fill: #151618;
+  margin-left: 8px;
+}
+
+.blog__item-link {
+  font-size: 13px;
+  display: flex;
+  align-items: center;
+  transition: all 0.3s ease;
+
+  &:hover {
+    color: #754E29;
+  }
+
+  &:hover .blog__item-link-img {
+    fill: #754E29;
+  }
+}
+
+.blog__link {
+  padding: 12px 41px;
+  border: 1px solid #151618;
+  align-self: center;
+}

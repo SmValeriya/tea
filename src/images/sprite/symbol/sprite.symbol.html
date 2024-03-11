@@ -1,0 +1,455 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>SVG &lt;symbol&gt; sprite preview | svg-sprite</title>
+        <style>
+            body {
+                padding: 0;
+                margin: 0;
+                color: #666;
+                background: #fafafa;
+                font-family: Arial, Helvetica, sans-serif;
+                font-size: 1em;
+                line-height: 1.4;
+            }
+
+            header {
+                display: block;
+                padding: 3em 3em 2em;
+                background-color: #fff;
+            }
+
+            header p {
+                margin: 2em 0 0;
+            }
+
+            section {
+                border-top: 1px solid #eee;
+                padding: 2em 3em 0;
+            }
+
+            section ul {
+                margin: 0;
+                padding: 0;
+            }
+
+            section li {
+                display: inline-block;
+                background-color: #fff;
+                position: relative;
+                margin: 0 2em 2em 0;
+                vertical-align: top;
+                border: 1px solid #ccc;
+                padding: 1em 1em 3em;
+                cursor: default;
+            }
+
+            .icon-box {
+                margin: 0;
+                width: 144px;
+                height: 144px;
+                position: relative;
+                background: #ccc url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12'%3E%3Cpath fill='%23fff' d='M6 0h6v6H6zM0 6h6v6H0z'/%3E%3C/svg%3E") top left repeat;
+                border: 1px solid #ccc;
+                display: table-cell;
+                vertical-align: middle;
+                text-align: center;
+            }
+
+            .icon {
+                display: inline-block;
+            }
+
+            h1 {
+                margin-top: 0;
+            }
+
+            h2 {
+                margin: 0;
+                padding: 0;
+                font-size: 1em;
+                font-weight: 400;
+                white-space: nowrap;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                position: absolute;
+                left: 1em;
+                right: 1em;
+                bottom: 1em;
+            }
+
+            footer {
+                display: block;
+                margin: 0;
+                padding: 0 3em 3em;
+            }
+
+            footer p {
+                margin: 0;
+                font-size: .7em;
+            }
+
+            footer a {
+                color: #0f7595;
+                margin-left: 0;
+            }
+        </style>
+
+<!--
+Sprite shape dimensions
+====================================================================================================
+You will need to set the sprite shape dimensions via CSS when you use them as inline SVG, otherwise
+they would become a huge 100% in size. You may use the following dimension classes for doing so.
+They might well be outsourced to an external stylesheet of course.
+-->
+
+<style>
+ .svg-arrow-dims { width: 5px; height: 10px; }
+ .svg-cart-dims { width: 20px; height: 22px; }
+ .svg-close-dims { width: 20px; height: 20px; }
+ .svg-facebook-dims { width: 22px; height: 22px; }
+ .svg-garden-dims { width: 60px; height: 60px; }
+ .svg-instagram-dims { width: 22px; height: 22px; }
+ .svg-leaf-dims { width: 60px; height: 60px; }
+ .svg-mail-dims { width: 22px; height: 16px; }
+ .svg-phone-dims { width: 21px; height: 21px; }
+ .svg-search-dims { width: 22px; height: 23px; }
+ .svg-shipping-dims { width: 66px; height: 65px; }
+ .svg-support-dims { width: 60px; height: 60px; }
+ .svg-twitter-dims { width: 22px; height: 18px; }
+ .svg-user-dims { width: 18px; height: 22px; }
+ .svg-youtube-dims { width: 24px; height: 18px; }
+</style>
+
+<!--
+====================================================================================================
+-->
+
+    </head>
+    <body>
+
+<!--
+Inline <symbol> SVG sprite
+====================================================================================================
+This is an inlined version of the generated SVG sprite. The single images may be <use>d everywhere
+below within this document. Please see
+
+    https://github.com/svg-sprite/svg-sprite/blob/main/docs/configuration.md#defs--symbol-mode
+
+for further details on how to create this embeddable sprite variant.
+-->
+
+<svg width="0" height="0" style="position:absolute">
+     <symbol fill="none" viewBox="0 0 5 10" id="arrow" xmlns="http://www.w3.org/2000/svg"><path d="M.159 9.838a.533.533 0 0 0 .766 0l3.599-3.682a1.69 1.69 0 0 0 0-2.35L.965.162a.533.533 0 0 0-.766 0 .563.563 0 0 0 0 .784l3.56 3.641a.563.563 0 0 1 0 .784L.16 9.054a.563.563 0 0 0 0 .784z" fill="#151618"/></symbol>
+     <symbol fill="none" viewBox="0 0 20 22" id="cart" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="m14.592 5-.06-.243c-.267-1.056-.689-2.203-1.376-3.107C12.447.718 11.412 0 10 0 8.588 0 7.553.718 6.844 1.65c-.687.904-1.109 2.051-1.377 3.107L5.408 5H3.786C2.184 5 .857 6.225.75 7.8l-.743 11C-.11 20.532 1.282 22 3.042 22h13.916c1.76 0 3.152-1.468 3.035-3.2l-.743-11C19.143 6.225 17.816 5 16.214 5h-1.622zm-8.648 5a.986.986 0 0 0 1.014-1.002 6.786 6.786 0 0 1 .007-.306A18.074 18.074 0 0 1 7.107 7h5.786a18.849 18.849 0 0 1 .149 2s0 1 1.014 1 1.014-1.001 1.014-1.001l-.001-.106A20.05 20.05 0 0 0 14.936 7h1.278c.534 0 .977.408 1.012.933l.744 11A1.006 1.006 0 0 1 16.958 20H3.042c-.587 0-1.05-.49-1.012-1.067l.744-11A1.008 1.008 0 0 1 3.786 7h1.278a20.98 20.98 0 0 0-.133 1.893v.104C4.928 9.567 5.364 10 5.943 10zM7.5 5h5.002c-.234-.847-.553-1.605-.967-2.15C11.102 2.282 10.616 2 10 2s-1.102.282-1.534.85C8.052 3.395 7.734 4.153 7.5 5z" fill="#151618"/></symbol>
+     <symbol fill="none" viewBox="0 0 20 20" id="close" xmlns="http://www.w3.org/2000/svg"><path d="M.553.553a1.89 1.89 0 0 0 0 2.673L7.328 10 .553 16.774a1.89 1.89 0 0 0 2.673 2.673L10 12.672l6.774 6.774a1.89 1.89 0 1 0 2.673-2.672L12.672 10l6.775-6.774A1.89 1.89 0 0 0 16.774.553L10 7.328 3.226.553a1.89 1.89 0 0 0-2.673 0z" fill="#754E29"/></symbol>
+     <symbol fill="none" viewBox="0 0 22 22" id="facebook" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M19 0a3 3 0 0 1 3 3v16a3 3 0 0 1-3 3H3a3 3 0 0 1-3-3V3a3 3 0 0 1 3-3h16zm0 2a1 1 0 0 1 1 1v16a1 1 0 0 1-1 1h-5v-7h2.076a1 1 0 0 0 .949-.684l.443-1.329a.75.75 0 0 0-.712-.987H14V8c0-.5.5-1 1-1h2a1 1 0 0 0 1-1v-.686a.71.71 0 0 0-.519-.695C16.171 4.273 15 4.273 15 4.273c-2.5 0-4 1.727-4 3.227V10H9a1 1 0 0 0-1 1v1a1 1 0 0 0 1 1h2v7H3a1 1 0 0 1-1-1V3a1 1 0 0 1 1-1h16z" fill="#151618"/></symbol>
+     <symbol fill="none" viewBox="0 0 60 60" id="garden" xmlns="http://www.w3.org/2000/svg"><path d="m25.556.154-.014-.02-.037.029C11.17 1.687 0 13.828 0 28.589c0 6.61 2.242 12.696 6.005 17.54v.005h.006a28.528 28.528 0 0 0 8.756 7.495 28.491 28.491 0 0 0 11.003 3.414c.134-1.36.466-2.784.963-4.222a24.197 24.197 0 0 1-16.08-7.822c.158-.686.229-1.484.286-2.176l.026-.337c.051-.63.1-1.235.18-1.847.2-1.507.542-2.513 1.076-3.082.685-.735 1.388-.858 2.858-1.118l.266-.048c.754-.132 1.762-.335 2.733-.864 1.036-.566 1.913-1.43 2.572-2.701.666-1.281.617-2.602.434-3.645a20.02 20.02 0 0 0-.656-2.468l-.132-.423c-.585-1.91-.656-2.839-.174-3.573.526-.8 1.245-.984 3.118-1.47l.243-.06c1.902-.492 4.477-1.315 5.968-4.497 1.616-3.445.705-7.33-.286-9.966a25.408 25.408 0 0 0-1.065-2.43c.152-.006.303-.006.454-.006a24.136 24.136 0 0 1 12.95 3.745 119.92 119.92 0 0 1-2.102 2.716c-1.799 2.25-3.826 4.566-5.208 5.604a3.964 3.964 0 0 0-1.388 1.852 4.172 4.172 0 0 0-.157 2.099c.2 1.19.83 2.304 1.39 3.156.466.712 1.014 1.43 1.474 2.035l.314.41c.266.357.485.651.648.906.083.123.143.223.183.297.04.071.054.109.057.111.114.315.237.83.38 1.544l.063.303c1.267-.566 2.64-1 4.111-1.272a14.787 14.787 0 0 0-.536-2.058c-.314-.85-.997-1.761-1.488-2.413a62.045 62.045 0 0 0-.371-.486 30.656 30.656 0 0 1-1.254-1.73c-.442-.674-.657-1.14-.728-1.424 1.856-1.435 4.135-4.105 5.854-6.252a107.34 107.34 0 0 0 2.161-2.799 24.25 24.25 0 0 1 7.881 16.633 34.76 34.76 0 0 1 4.312.603C56.717 12.413 44.085 0 28.554 0c-1.01 0-2.013.051-2.998.154zm-18.6 39.53a24.333 24.333 0 0 1 6.556-30.17 24.267 24.267 0 0 1 9.994-4.7 21.775 21.775 0 0 1 1.653 3.42c.897 2.387 1.257 4.834.417 6.632-.642 1.367-1.556 1.753-3.164 2.167l-.462.115c-1.52.368-3.915.946-5.406 3.21-1.716 2.607-.87 5.463-.342 7.19l.171.55c.228.728.4 1.286.491 1.817.109.62.029.847-.011.93-.286.551-.571.777-.823.914-.314.172-.725.286-1.433.41-.114.022-.24.042-.371.062-1.322.217-3.424.563-5.134 2.401-1.388 1.487-1.893 3.46-2.136 5.052zm21.618 18.08c.171-2.759 1.414-6.124 3.521-9.295a22.944 22.944 0 0 1 2.53-3.482 25.394 25.394 0 0 1 12.838-7.861 1.429 1.429 0 0 0 1.04-1.736 1.43 1.43 0 0 0-1.734-1.04 28.251 28.251 0 0 0-14.291 8.75 26.919 26.919 0 0 0-2.074 2.697 10.194 10.194 0 0 1-.422-2.914c0-2.621 1.333-5.469 3.446-7.727a15.202 15.202 0 0 1 9.123-4.672c7.996-1.058 12.958-.171 15.885.65a2.141 2.141 0 0 1 1.538 1.732 2.146 2.146 0 0 1-.935 2.121c-.163.109-.426.372-.743.972a14.12 14.12 0 0 0-.913 2.359c-.249.812-.486 1.69-.743 2.644l-.165.606a61.803 61.803 0 0 1-1.091 3.677c-.834 2.464-2.01 5.094-3.99 7.113-2.052 2.095-4.84 3.402-8.563 3.402-3.795 0-6.444-1.541-8.138-3.314-1.153 2.116-1.753 4.108-1.844 5.578a2.145 2.145 0 0 1-2.265 1.972 2.14 2.14 0 0 1-2.01-2.232z" fill="#754E29"/></symbol>
+     <symbol fill="none" viewBox="0 0 22 22" id="instagram" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M11 17a6 6 0 1 0 0-12 6 6 0 0 0 0 12zm0-2a4 4 0 1 0 0-8 4 4 0 0 0 0 8z" fill="#0F0F0F"/><path d="M17 4a1 1 0 1 0 0 2 1 1 0 0 0 0-2z" fill="#0F0F0F"/><path fill-rule="evenodd" clip-rule="evenodd" d="M.654 3.276C0 4.56 0 6.24 0 9.6v2.8c0 3.36 0 5.04.654 6.324a6 6 0 0 0 2.622 2.622C4.56 22 6.24 22 9.6 22h2.8c3.36 0 5.04 0 6.324-.654a6 6 0 0 0 2.622-2.622C22 17.44 22 15.76 22 12.4V9.6c0-3.36 0-5.04-.654-6.324A6 6 0 0 0 18.724.654C17.44 0 15.76 0 12.4 0H9.6C6.24 0 4.56 0 3.276.654A6 6 0 0 0 .654 3.276zM12.4 2H9.6c-1.713 0-2.878.002-3.778.075-.877.072-1.325.202-1.638.361a4 4 0 0 0-1.748 1.748c-.16.313-.29.761-.36 1.638C2.001 6.722 2 7.887 2 9.6v2.8c0 1.713.002 2.878.075 3.778.072.877.202 1.325.361 1.638a4 4 0 0 0 1.748 1.748c.313.16.761.29 1.638.36.9.074 2.065.076 3.778.076h2.8c1.713 0 2.878-.002 3.778-.075.877-.072 1.325-.202 1.638-.361a4 4 0 0 0 1.748-1.748c.16-.313.29-.761.36-1.638.074-.9.076-2.065.076-3.778V9.6c0-1.713-.002-2.878-.075-3.778-.072-.877-.202-1.325-.361-1.638a4 4 0 0 0-1.748-1.748c-.313-.16-.761-.29-1.638-.36C15.278 2.001 14.113 2 12.4 2z" fill="#0F0F0F"/></symbol>
+     <symbol fill="none" viewBox="0 0 60 60" id="leaf" xmlns="http://www.w3.org/2000/svg"><path d="M50.886 16.485c.002 1.52-.21 3.032-.629 4.495h4.922c2.664 0 4.821 2.128 4.821 4.754v14.728a19.29 19.29 0 0 1-3.017 10.35A19.66 19.66 0 0 1 48.852 58a19.983 19.983 0 0 1-10.759 1.827 19.893 19.893 0 0 1-10.098-4.091l-3.6 3.549a2.278 2.278 0 0 1-1.627.715 2.304 2.304 0 0 1-1.651-.658 2.246 2.246 0 0 1-.667-1.63 2.223 2.223 0 0 1 .725-1.605l3.597-3.551a19.403 19.403 0 0 1-2.899-4.96 18.47 18.47 0 0 1-8.009-.16 18.326 18.326 0 0 1-7.166-3.532 18.021 18.021 0 0 1-4.94-6.222A17.783 17.783 0 0 1 0 29.972V16.526c0-2.505 2.06-4.537 4.6-4.537h13.497A16.483 16.483 0 0 1 24.1 3.334 16.865 16.865 0 0 1 34.177 0h12.334c2.416 0 4.375 1.933 4.375 4.316v12.169zM22.7 12.535a18.365 18.365 0 0 1 6.91 3.389 18.074 18.074 0 0 1 4.874 5.902 19.99 19.99 0 0 1 5.77-.846h5.194a11.85 11.85 0 0 0 .881-4.495V4.495H34.177A12.27 12.27 0 0 0 27.14 6.71a12.012 12.012 0 0 0-4.44 5.824zm8.546 39.994a15.366 15.366 0 0 0 15.86 1.308 15.113 15.113 0 0 0 6.086-5.524 14.836 14.836 0 0 0 2.251-7.85v-14.73a.254.254 0 0 0-.076-.181.26.26 0 0 0-.185-.076H40.253c-2.81 0-5.564.769-7.957 2.221a15.065 15.065 0 0 0-5.6 6.005 14.814 14.814 0 0 0 1.326 15.647l12.9-12.723a2.279 2.279 0 0 1 1.626-.715 2.305 2.305 0 0 1 1.652.658 2.245 2.245 0 0 1 .667 1.629 2.223 2.223 0 0 1-.725 1.605L31.246 52.529zm-10.74-12.067c0-1.774.243-3.495.693-5.128l-8.379-8.27a2.248 2.248 0 0 1-.725-1.604 2.221 2.221 0 0 1 .667-1.63 2.282 2.282 0 0 1 1.652-.657 2.305 2.305 0 0 1 1.627.715l7.041 6.944a19.709 19.709 0 0 1 7.216-7.2 13.566 13.566 0 0 0-5.03-5.224 13.81 13.81 0 0 0-7.04-1.923H4.584l-.015.012a.064.064 0 0 0-.009.015l-.003.014v13.446c0 1.979.44 3.933 1.292 5.724A13.512 13.512 0 0 0 9.48 40.34a13.738 13.738 0 0 0 5.286 2.683c1.94.5 3.968.574 5.94.216-.133-.92-.2-1.847-.2-2.776z" fill="#754E29"/></symbol>
+     <symbol fill="none" viewBox="0 0 22 16" id="mail" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M19 0a3 3 0 0 1 3 3v10a3 3 0 0 1-3 3H3a3 3 0 0 1-3-3V3a3 3 0 0 1 3-3h16zm-.747 2H3.747l6.633 5.237a1 1 0 0 0 1.24 0L18.253 2zM2 3.169V13a1 1 0 0 0 1 1h16a1 1 0 0 0 1-1V3.169l-7.141 5.637a3 3 0 0 1-3.718 0L2 3.17z" fill="#151618"/></symbol>
+     <symbol fill="none" viewBox="0 0 21 21" id="phone" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M15.765 20.724c-2.02-.506-6.156-1.933-9.905-5.682C2.111 11.293.684 7.158.178 5.138-.112 3.977.411 2.856 1.3 2.222L3.627.56a3 3 0 0 1 4.21.734L9.304 3.41a2 2 0 0 1-.481 2.766l-1.17.835c.178.676.728 2.066 2.45 3.789 1.724 1.723 3.113 2.273 3.79 2.45l.835-1.169a2 2 0 0 1 2.766-.482l2.117 1.466a3 3 0 0 1 .733 4.21l-1.663 2.328c-.634.888-1.754 1.412-2.915 1.121zm-8.49-7.096c3.409 3.41 7.171 4.704 8.976 5.156.264.067.583-.036.802-.343l1.663-2.328a1 1 0 0 0-.245-1.404l-2.117-1.466-.896 1.255c-.366.512-1.043.914-1.831.744-.984-.212-2.803-.893-4.938-3.028S5.873 8.26 5.66 7.276c-.17-.789.232-1.466.745-1.832l1.254-.896-1.466-2.117a1 1 0 0 0-1.403-.244L2.462 3.85c-.307.219-.41.538-.344.802.452 1.804 1.747 5.567 5.156 8.976z" fill="#151618"/></symbol>
+     <symbol fill="none" viewBox="0 0 22 23" id="search" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M16.04 15.124a9.004 9.004 0 1 0-1.415 1.415l5.667 5.668a1 1 0 0 0 1.415-1.415l-5.668-5.668zm-7.036 1.393a7.013 7.013 0 1 1 0-14.026 7.013 7.013 0 0 1 0 14.026z" fill="#151618"/></symbol>
+     <symbol fill="none" viewBox="0 0 66 65" id="shipping" xmlns="http://www.w3.org/2000/svg"><path d="M29.763 3.749A7.17 7.17 0 0 1 33 2.983a7.17 7.17 0 0 1 3.237.766l25.05 12.705c.519.264.952.65 1.253 1.117.301.468.46 1 .46 1.543v25.067a5.69 5.69 0 0 1-.922 3.086 6.43 6.43 0 0 1-2.508 2.234l-23.333 11.84a7.17 7.17 0 0 1-3.237.767 7.17 7.17 0 0 1-3.237-.766L6.43 49.502a6.43 6.43 0 0 1-2.508-2.233A5.69 5.69 0 0 1 3 44.184v-25.07c0-.542.159-1.075.46-1.543a3.214 3.214 0 0 1 1.253-1.117l25.05-12.705z" stroke="#754E29" stroke-width="4.167" stroke-linecap="round" stroke-linejoin="round"/><path d="m3 17.325 30 15.22m0 0 30-15.22m-30 15.22v30.438" stroke="#754E29" stroke-width="4.167" stroke-linejoin="round"/><path d="m18 24.935 30-15.22M13 33.543l10 5.089" stroke="#754E29" stroke-width="4.167" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+     <symbol fill="none" viewBox="0 0 60 60" id="support" xmlns="http://www.w3.org/2000/svg"><path d="M30 0C13.458 0 0 13.458 0 30v12.429C0 45.501 2.691 48 6 48h3a3 3 0 0 0 3-3V29.571a3 3 0 0 0-3-3H6.276C7.944 14.961 17.934 6 30 6s22.056 8.961 23.724 20.571H51a3 3 0 0 0-3 3V48c0 3.309-2.691 6-6 6h-6v-3H24v9h18c6.618 0 12-5.382 12-12 3.309 0 6-2.499 6-5.571V30C60 13.458 46.542 0 30 0z" fill="#754E29"/></symbol>
+     <symbol fill="none" viewBox="0 0 22 18" id="twitter" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M18.783 1.203a4.88 4.88 0 0 0 .79-.24c.28-.115.51-.253.876-.486a1.029 1.029 0 0 1 1.025-.044.96.96 0 0 1 .526.849c0 1.042-.135 1.897-.447 2.648a5.235 5.235 0 0 1-1.071 1.614c-.186 3.243-1.16 5.79-2.648 7.72-1.543 2-3.595 3.28-5.759 3.998-2.157.715-4.436.875-6.478.633-2.029-.241-3.904-.889-5.21-1.869a.943.943 0 0 1-.307-1.138c.177-.403.613-.64 1.062-.578 1.285.177 2.523-.105 3.541-.508a6.381 6.381 0 0 1-.565-.336c-.927-.62-1.676-1.46-2.012-2.11a.934.934 0 0 1-.004-.854.974.974 0 0 1 .3-.349C1.046 9.075.5 7.584.5 6.586a.95.95 0 0 1 .385-.76c.102-.077.217-.133.338-.167a6.896 6.896 0 0 1-.24-.855C.717 3.563.741 2.162 1.03 1.048a.988.988 0 0 1 .83-.721A1.01 1.01 0 0 1 2.865.8c1.079 1.8 3.066 2.902 4.916 3.554.87.307 1.675.502 2.279.622.13-1.177.47-2.148.994-2.919A4.58 4.58 0 0 1 13.74.17c1.783-.463 3.76.064 5.043 1.033zm-9.035 5.68a18.866 18.866 0 0 1-2.654-.718c-1.357-.478-2.933-1.224-4.253-2.38.023.213.057.424.1.629.222 1.033.633 1.612 1.006 1.791a.95.95 0 0 1 .49 1.198c-.239.624-.869.675-1.441.537.46.666 1.288 1.33 2.668 1.552.477.076.828.47.836.936a.973.973 0 0 1-.804.96l-.87.169c.133.111.277.22.43.323.698.466 1.397.666 2.002.52.452-.108.923.099 1.134.5a.941.941 0 0 1-.252 1.177c-.644.517-1.396.932-2.15 1.276-.353.162-.749.321-1.178.461.33.068.674.124 1.029.166 1.77.21 3.741.069 5.584-.542 1.836-.609 3.534-1.679 4.804-3.325 1.268-1.644 2.153-3.92 2.272-7.01a.948.948 0 0 1 .292-.646c.45-.433.821-.93 1.004-1.522-.32.096-.68.18-1.11.259-.325.06-.66-.04-.894-.266-.765-.737-2.276-1.222-3.533-.896a2.584 2.584 0 0 0-1.533 1.081c-.412.608-.727 1.554-.727 2.99a.95.95 0 0 1-.33.716c-.498.434-1.336.178-1.921.064z" fill="#0F0F0F"/></symbol>
+     <symbol fill="none" viewBox="0 0 18 22" id="user" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M9 11c2.761 0 5-2.462 5-5.5S11.761 0 9 0 4 2.462 4 5.5 6.239 11 9 11zm0-2.2c-1.657 0-3-1.477-3-3.3 0-1.823 1.343-3.3 3-3.3s3 1.477 3 3.3c0 1.823-1.343 3.3-3 3.3zm7.103 4.309a2.608 2.608 0 0 0-3.187-.41c-.19.113-.358.216-.512.312-.41.253-.729.449-1.139.617C10.75 13.84 10.084 14 9 14c-1.073 0-1.75-.15-2.274-.355-.462-.181-.828-.408-1.31-.707-.093-.059-.192-.12-.296-.184a2.628 2.628 0 0 0-3.256.388c-.38.384-.824.88-1.18 1.42C.347 15.079 0 15.765 0 16.5V19a3 3 0 0 0 3 3h12a3 3 0 0 0 3-3v-2.5c0-.746-.355-1.44-.7-1.96a9.699 9.699 0 0 0-1.197-1.431zm-2.166 1.31a.608.608 0 0 1 .75.101c.334.337.685.732.946 1.125.278.42.367.707.367.855V19a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1v-2.5c0-.145.085-.427.356-.839.254-.386.598-.777.93-1.112a.629.629 0 0 1 .788-.09c.083.05.167.103.253.157.482.301 1.022.638 1.671.892.795.31 1.726.492 3.002.492 1.3 0 2.231-.195 3.025-.522.576-.236 1.083-.55 1.53-.827.133-.082.26-.16.382-.232z" fill="#151618"/></symbol>
+     <symbol fill="none" viewBox="0 0 24 18" id="youtube" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M9.496 4.132A1 1 0 0 0 8 5v8a1 1 0 0 0 1.496.868l7-4a1 1 0 0 0 0-1.736l-7-4zM13.984 9 10 11.277V6.723L13.984 9z" fill="#0F0F0F"/><path fill-rule="evenodd" clip-rule="evenodd" d="M0 9c0-3.75 0-5.625.955-6.939A5 5 0 0 1 2.06.955C3.375 0 5.251 0 9 0h6c3.75 0 5.625 0 6.939.955a5 5 0 0 1 1.106 1.106C24 3.375 24 5.251 24 9c0 3.75 0 5.625-.955 6.939a5 5 0 0 1-1.106 1.106C20.625 18 18.749 18 15 18H9c-3.75 0-5.625 0-6.939-.955A5 5 0 0 1 .955 15.94C0 14.625 0 12.749 0 9zm9-7h6c1.92 0 3.198.003 4.167.108.932.1 1.337.276 1.596.465.255.185.479.409.664.664.189.259.364.664.465 1.596C21.997 5.802 22 7.08 22 9s-.003 3.198-.108 4.167c-.1.932-.276 1.337-.465 1.596a2.988 2.988 0 0 1-.664.664c-.259.189-.664.364-1.596.465-.969.105-2.248.108-4.167.108H9c-1.92 0-3.198-.003-4.167-.108-.932-.1-1.337-.276-1.596-.465a3.003 3.003 0 0 1-.664-.664c-.189-.259-.364-.664-.465-1.596C2.003 12.198 2 10.92 2 9s.003-3.198.108-4.167c.1-.932.276-1.337.465-1.596a3 3 0 0 1 .664-.664c.259-.189.664-.364 1.596-.465C5.802 2.003 7.08 2 9 2z" fill="#0F0F0F"/></symbol>
+</svg>
+
+<!--
+====================================================================================================
+-->
+
+        <header>
+            <h1>SVG <code>&lt;symbol&gt;</code> sprite preview</h1>
+            <p>This preview features two methods of using the generated sprite in conjunction with inline SVG. Please have a look at the HTML source for further details and be aware of the following constraints:</p>
+            <ul>
+                <li>Your browser has to <a href="https://caniuse.com/svg-html5" target="_blank" rel="noopener noreferrer">support inline SVG</a> for these techniques to work.</li>
+                <li>The embedded sprite (A) slightly differs from the generated external one. Please <a href="https://github.com/svg-sprite/svg-sprite/blob/main/docs/configuration.md#defs--symbol-mode" target="_blank" rel="noopener noreferrer">see the documentation</a> for details on how to create such an embeddable sprite.</li>
+            </ul>
+        </header>
+        <section>
+
+<!--
+A) Inline SVG with embedded sprite
+====================================================================================================
+These SVG images make use of fragment identifiers (IDs) and are extracted out of the inline sprite
+embedded above. They may be styled via CSS.
+-->
+
+            <h3>A) Inline SVG with embedded sprite</h3>
+            <ul>
+
+             <li title="arrow">
+                    <div class="icon-box">
+                        <svg class="svg-arrow-dims">
+                            <use xlink:href="#arrow"></use>
+                        </svg>
+                    </div>
+                    <h2>arrow, </h2>
+                </li>
+             <li title="cart">
+                    <div class="icon-box">
+                        <svg class="svg-cart-dims">
+                            <use xlink:href="#cart"></use>
+                        </svg>
+                    </div>
+                    <h2>cart, </h2>
+                </li>
+             <li title="close">
+                    <div class="icon-box">
+                        <svg class="svg-close-dims">
+                            <use xlink:href="#close"></use>
+                        </svg>
+                    </div>
+                    <h2>close, </h2>
+                </li>
+             <li title="facebook">
+                    <div class="icon-box">
+                        <svg class="svg-facebook-dims">
+                            <use xlink:href="#facebook"></use>
+                        </svg>
+                    </div>
+                    <h2>facebook, </h2>
+                </li>
+             <li title="garden">
+                    <div class="icon-box">
+                        <svg class="svg-garden-dims">
+                            <use xlink:href="#garden"></use>
+                        </svg>
+                    </div>
+                    <h2>garden, </h2>
+                </li>
+             <li title="instagram">
+                    <div class="icon-box">
+                        <svg class="svg-instagram-dims">
+                            <use xlink:href="#instagram"></use>
+                        </svg>
+                    </div>
+                    <h2>instagram, </h2>
+                </li>
+             <li title="leaf">
+                    <div class="icon-box">
+                        <svg class="svg-leaf-dims">
+                            <use xlink:href="#leaf"></use>
+                        </svg>
+                    </div>
+                    <h2>leaf, </h2>
+                </li>
+             <li title="mail">
+                    <div class="icon-box">
+                        <svg class="svg-mail-dims">
+                            <use xlink:href="#mail"></use>
+                        </svg>
+                    </div>
+                    <h2>mail, </h2>
+                </li>
+             <li title="phone">
+                    <div class="icon-box">
+                        <svg class="svg-phone-dims">
+                            <use xlink:href="#phone"></use>
+                        </svg>
+                    </div>
+                    <h2>phone, </h2>
+                </li>
+             <li title="search">
+                    <div class="icon-box">
+                        <svg class="svg-search-dims">
+                            <use xlink:href="#search"></use>
+                        </svg>
+                    </div>
+                    <h2>search, </h2>
+                </li>
+             <li title="shipping">
+                    <div class="icon-box">
+                        <svg class="svg-shipping-dims">
+                            <use xlink:href="#shipping"></use>
+                        </svg>
+                    </div>
+                    <h2>shipping, </h2>
+                </li>
+             <li title="support">
+                    <div class="icon-box">
+                        <svg class="svg-support-dims">
+                            <use xlink:href="#support"></use>
+                        </svg>
+                    </div>
+                    <h2>support, </h2>
+                </li>
+             <li title="twitter">
+                    <div class="icon-box">
+                        <svg class="svg-twitter-dims">
+                            <use xlink:href="#twitter"></use>
+                        </svg>
+                    </div>
+                    <h2>twitter, </h2>
+                </li>
+             <li title="user">
+                    <div class="icon-box">
+                        <svg class="svg-user-dims">
+                            <use xlink:href="#user"></use>
+                        </svg>
+                    </div>
+                    <h2>user, </h2>
+                </li>
+             <li title="youtube">
+                    <div class="icon-box">
+                        <svg class="svg-youtube-dims">
+                            <use xlink:href="#youtube"></use>
+                        </svg>
+                    </div>
+                    <h2>youtube, </h2>
+                </li>
+         </ul>
+
+<!--
+====================================================================================================
+-->
+
+        </section>
+        <section>
+
+<!--
+B) Inline SVG with external sprite
+====================================================================================================
+These SVG images make use of an URL + fragment identifiers (IDs) and refer to the regular external
+SVG sprite. They may be styled via CSS.
+-->
+
+            <h3>B) Inline SVG with external sprite</h3>
+            <ul>
+
+             <li title="arrow">
+                    <div class="icon-box">
+                        <svg class="svg-arrow-dims">
+                            <use xlink:href="../sprite.svg#arrow"></use>
+                        </svg>
+                    </div>
+                    <h2>arrow</h2>
+                </li>
+             <li title="cart">
+                    <div class="icon-box">
+                        <svg class="svg-cart-dims">
+                            <use xlink:href="../sprite.svg#cart"></use>
+                        </svg>
+                    </div>
+                    <h2>cart</h2>
+                </li>
+             <li title="close">
+                    <div class="icon-box">
+                        <svg class="svg-close-dims">
+                            <use xlink:href="../sprite.svg#close"></use>
+                        </svg>
+                    </div>
+                    <h2>close</h2>
+                </li>
+             <li title="facebook">
+                    <div class="icon-box">
+                        <svg class="svg-facebook-dims">
+                            <use xlink:href="../sprite.svg#facebook"></use>
+                        </svg>
+                    </div>
+                    <h2>facebook</h2>
+                </li>
+             <li title="garden">
+                    <div class="icon-box">
+                        <svg class="svg-garden-dims">
+                            <use xlink:href="../sprite.svg#garden"></use>
+                        </svg>
+                    </div>
+                    <h2>garden</h2>
+                </li>
+             <li title="instagram">
+                    <div class="icon-box">
+                        <svg class="svg-instagram-dims">
+                            <use xlink:href="../sprite.svg#instagram"></use>
+                        </svg>
+                    </div>
+                    <h2>instagram</h2>
+                </li>
+             <li title="leaf">
+                    <div class="icon-box">
+                        <svg class="svg-leaf-dims">
+                            <use xlink:href="../sprite.svg#leaf"></use>
+                        </svg>
+                    </div>
+                    <h2>leaf</h2>
+                </li>
+             <li title="mail">
+                    <div class="icon-box">
+                        <svg class="svg-mail-dims">
+                            <use xlink:href="../sprite.svg#mail"></use>
+                        </svg>
+                    </div>
+                    <h2>mail</h2>
+                </li>
+             <li title="phone">
+                    <div class="icon-box">
+                        <svg class="svg-phone-dims">
+                            <use xlink:href="../sprite.svg#phone"></use>
+                        </svg>
+                    </div>
+                    <h2>phone</h2>
+                </li>
+             <li title="search">
+                    <div class="icon-box">
+                        <svg class="svg-search-dims">
+                            <use xlink:href="../sprite.svg#search"></use>
+                        </svg>
+                    </div>
+                    <h2>search</h2>
+                </li>
+             <li title="shipping">
+                    <div class="icon-box">
+                        <svg class="svg-shipping-dims">
+                            <use xlink:href="../sprite.svg#shipping"></use>
+                        </svg>
+                    </div>
+                    <h2>shipping</h2>
+                </li>
+             <li title="support">
+                    <div class="icon-box">
+                        <svg class="svg-support-dims">
+                            <use xlink:href="../sprite.svg#support"></use>
+                        </svg>
+                    </div>
+                    <h2>support</h2>
+                </li>
+             <li title="twitter">
+                    <div class="icon-box">
+                        <svg class="svg-twitter-dims">
+                            <use xlink:href="../sprite.svg#twitter"></use>
+                        </svg>
+                    </div>
+                    <h2>twitter</h2>
+                </li>
+             <li title="user">
+                    <div class="icon-box">
+                        <svg class="svg-user-dims">
+                            <use xlink:href="../sprite.svg#user"></use>
+                        </svg>
+                    </div>
+                    <h2>user</h2>
+                </li>
+             <li title="youtube">
+                    <div class="icon-box">
+                        <svg class="svg-youtube-dims">
+                            <use xlink:href="../sprite.svg#youtube"></use>
+                        </svg>
+                    </div>
+                    <h2>youtube</h2>
+                </li>
+         </ul>
+
+<!--
+====================================================================================================
+-->
+
+        </section>
+        <footer>
+            <p>Generated at Mon, 11 Mar 2024 09:46:21 GMT by <a href="https://github.com/svg-sprite/svg-sprite" target="_blank" rel="noopener noreferrer">svg-sprite</a>.</p>
+        </footer>
+    </body>
+</html>

@@ -25,6 +25,7 @@ export const paths = {
   images: {
     src: [
       `./${srcDir}/images/**/*.{jpg,jpeg,png,gif,tiff}`,
+      `./${srcDir}/images/sprite/*.svg`,
       `!./${srcDir}/images/favicon/*.{jpg,jpeg,png,gif,tiff}`
     ],
     dist: `./${buildDir}/images/`,
@@ -32,12 +33,13 @@ export const paths = {
   svg: {
     src: [
       `./${srcDir}/images/**/*.svg`,
-      `!./${srcDir}/images/icons/*.svg`
+      `!./${srcDir}/images/icons/*.svg`,
+      `!./${srcDir}/images/sprite/*.svg`
     ],
     dist: `./${buildDir}/images/`,
   },
   sprite: {
     src: `./${srcDir}/images/icons/*.svg`,
-    dist: `./${buildDir}/images/`,
+    dist: `./${srcDir}/images/sprite/`,
   }
 };

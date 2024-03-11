@@ -1,0 +1,8 @@
+mixin user-actions(classList)
+  ul.user-actions(class=classList)
+    each action in userActions
+      li.user-actions__item
+        a.user-actions__link(href=action.link)
+          svg.user-actions__img
+            title= action.name
+            use(href=`./images/sprite.svg#${action.name}`)

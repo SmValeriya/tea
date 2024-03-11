@@ -1,0 +1,10 @@
+.title {
+  font-size: 40px;
+  font-family: Cormorant, serif;
+  font-weight: 400;
+  line-height: 1.2;
+
+  @include min-phones {
+    font-size: 24px;
+  }
+}

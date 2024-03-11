@@ -1,0 +1,26 @@
+.user-actions {
+  align-items: center;
+
+  &--expanded .user-actions__item:last-child {
+    margin-left: 80px;
+
+    @include laptop {
+      margin-left: 30px;
+    }
+
+    @include min-phones {
+      margin-left: 0;
+    }
+  }
+}
+
+.user-actions__img {
+  max-width: 22px;
+  height: 22px;
+  fill: #151618;
+  transition: all 0.3s ease;
+
+  &:hover {
+    fill: #754E29;
+  }
+}

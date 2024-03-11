@@ -1,2 +1,10 @@
-header
-  p Header
+include ../mixins/logo.pug
+include ../mixins/hamburger.pug
+include ../mixins/user-actions.pug
+
+header.header
+  div.container.header__container
+    +hamburger('header__hamburger')
+    +logo('header__logo')
+    include nav.pug
+    +user-actions('user-actions--expanded header__user-actions')

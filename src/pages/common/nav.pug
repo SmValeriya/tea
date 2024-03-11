@@ -1,0 +1,13 @@
+include ../mixins/user-actions.pug
+include ../mixins/menu.pug
+include ../mixins/company.pug
+
+div.nav
+  nav.nav__container
+    button.btn.nav__btn
+      svg.btn--close.nav__btn-img
+        title Close
+        use(href="./images/sprite.svg#close")
+    +menu('nav__menu')
+    +company('nav__company', true)
+    +user-actions('nav__user-actions')

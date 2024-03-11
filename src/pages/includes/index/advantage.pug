@@ -1,0 +1,10 @@
+section.advantage
+  div.container.advantage__container
+    h2.title.advantage__title We Prioritise
+    ul.advantage__list
+      each advantage in advantages
+        li.advantage__item
+          h4.advantage__name= advantage.title
+          p.advantage__text= advantage.text
+          svg.advantage__img
+            use(href=`./images/sprite.svg#${advantage.imageName}`)

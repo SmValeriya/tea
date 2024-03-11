@@ -13,7 +13,7 @@ const { src, dest } = gulp;
 export const images = () => {
   return src(paths.images.src)
     .pipe(plumber())
-    .pipe(gulpAvif())
+    //.pipe(gulpAvif())
     .pipe(src(paths.images.src))
     .pipe(webp())
     .pipe(src(paths.images.src))

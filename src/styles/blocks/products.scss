@@ -1,0 +1,67 @@
+.products {
+  padding-bottom: 150px;
+
+  @include laptop {
+    padding-bottom: 120px;
+  }
+
+  @include phones {
+    padding-bottom: 60px;
+  }
+
+  @include min-phones {
+    padding-bottom: 80px;
+  }
+}
+
+.products__title {
+  margin-bottom: 60px;
+  text-align: center;
+
+  @include laptop {
+    margin-bottom: 40px;
+  }
+
+  @include min-phones {
+    margin-bottom: 0;
+  }
+}
+
+.products__list {
+  text-align: center;
+  display: flex;
+  gap: 0 40px;
+
+  @include laptop {
+    gap: 0;
+  }
+
+  @include tablets {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  @include phones {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
+
+.products__item {
+  max-width: 280px;
+  max-height: 280px;
+
+  @include phones {
+    max-width: 170px;
+  }
+}
+
+.products__item-img {
+  margin-bottom: 10px;
+}
+
+.products__item-title {
+  font-size: 24px;
+  font-weight: 400;
+  font-family: Cormorant, serif;
+}

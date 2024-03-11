@@ -5,15 +5,10 @@ block variables
 
 block content
   main.main
-    h2 Title
-    include includes/index/banner.pug
-    hr
-    p paragraph
-    ul.items
-      each val in team
-        li= val
-      h1.navbar__title This is my nav
-      ul
-        each val in ["Home", "Blog", "About"]
-          li.navbar__button
-            a(href="#")= val
+    include includes/index/top.pug
+    include includes/index/quote.pug
+    include includes/index/products.pug
+    include includes/index/reviews.pug
+    include includes/index/blog.pug
+    include includes/index/mailing.pug
+    include includes/index/advantage.pug

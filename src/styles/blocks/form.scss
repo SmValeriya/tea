@@ -1,0 +1,97 @@
+.form__row {
+  display: flex;
+  width: 100%;
+  margin-bottom: 10px;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.form__email {
+  flex-grow: 1;
+  min-width: 150px;
+  border: none;
+  border-bottom: 1px solid #b8b58b;
+  background-color: transparent;
+  padding: 3px 15px;
+  margin-right: 25px;
+  font-family: OpenSans, serif;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 1.5;
+  color: #151618;
+
+  &::placeholder {
+    font-family: OpenSans, serif;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 1.5;
+    color: #b8b58b;
+  }
+
+  @include phones {
+    margin-right: 20px;
+  }
+}
+
+.form__btn {
+  background-color: #ffffff;
+  border: 1px solid #151618;
+  padding: 10px 40px;
+  font-size: 20px;
+  font-weight: 300;
+  font-family: OpenSans, serif;
+  cursor: pointer;
+
+  @include phones {
+    line-height: 1;
+  }
+}
+
+.form__checkbox {
+  display: flex;
+}
+
+
+
+.form__checkbox-input {
+  width: 1px;
+  height: 1px;
+  clip-path: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+.form__checkbox-text {
+  font-size: 13px;
+  position: relative;
+  padding-left: 20px;
+
+  &::before {
+    content: '';
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 10px;
+    height: 10px;
+    border: 1px solid #151618;
+  }
+
+  &::after {
+    content: '';
+    display: none;
+    position: absolute;
+    left: 2px;
+    top: 2px;
+    width: 6px;
+    height: 6px;
+    background-color: #151618;
+  }
+}
+
+.form__checkbox-input:checked+.form__checkbox-text::after {
+  display: block;
+}

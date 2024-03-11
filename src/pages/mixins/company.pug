@@ -1,0 +1,11 @@
+mixin company(classList, nav)
+  ul.company(class=classList)
+    if(nav)
+      each company in companies
+        if company.mobile
+          li.company__item
+            a.company__link(href=company.link)= company.title
+    else
+      each company in companies
+        li.company__item
+          a.company__link(href=company.link)= company.title

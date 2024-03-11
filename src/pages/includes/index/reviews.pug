@@ -1,0 +1,9 @@
+section.reviews
+  div.container.reviews__container
+    h2.title.reviews__title What our Clients say
+    ul.reviews__list
+      each review in reviews
+        li.reviews__item
+          article.reviews__content
+            blockquote.reviews__text "#{review.text}"
+            cite.reviews__author by #{review.author}
